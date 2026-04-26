@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+</head>
+<body>
+
+<h1>-------------- Q U I Z --------------</h1>
+<h3>Open Console to see results</h3>
+
+<script>
+let questions = [
+{
+    ques: "Q1. What does JS stand for?",
+    options: ["1. JavaScript", "2. Jungle Safari", "3. Java Source", "4. Just Style"],
+    answer: 1
+},
+
+{
+    ques: "Q2. Which language runs in the browser?",
+    options: ["1. C++", "2. JavaScript", "3. Java", "4. Python"],
+    answer: 2
+},
+
+{
+    ques: "Q3. Which HTML tag is used to create a hyperlink?",
+    options: ["1. <img>", "2. <p>", "3. <a>", "4. <div>"],
+    answer: 3
+},
+
+{
+    ques: "Q4. Which CSS property changes text color?",
+    options: ["1. background-color", "2. color", "3. font-size", "4. margin"],
+    answer: 2
+},
+
+{
+    ques: "Q5. Which method prints output in console?",
+    options: ["1. print()", "2. log.console()", "3. console.log()", "4. display()"],
+    answer: 3
+}
+];
+
+let userAnswers = [];
+let count = 0;
+
+// Take Answers
+for (let i = 0; i < questions.length; i++) {
+
+    let text = questions[i].ques + "\n";
+
+    for (let j = 0; j < questions[i].options.length; j++) {
+        text += questions[i].options[j] + "\n";
+    }
+
+    let ans = Number(prompt(text));
+    userAnswers.push(ans);
+}
+
+// Calculate Score
+for (let i = 0; i < questions.length; i++) {
+    if (userAnswers[i] === questions[i].answer) {
+        count++;
+    }
+}
+
+console.log("You gave " + count + " correct answers.");
+console.log("Correct Answers: " + count);
+console.log("Wrong Answers: " + (questions.length - count));
+
+// Show Detailed Result
+for (let i = 0; i < questions.length; i++) {
+
+    if (userAnswers[i] === questions[i].answer) {
+        console.log((i + 1) + " : Correct");
+    } else {
+        console.log((i + 1) + " : Wrong");
+    }
+
+    console.log("Your Answer: " + questions[i].options[userAnswers[i] - 1]);
+    console.log("Correct Answer: " + questions[i].options[questions[i].answer - 1]);
+    console.log("----------------------");
+}
+</script>
+
+</body>
+</html>

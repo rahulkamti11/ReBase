@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .plans {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .plan {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .plan h2 {
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 32px;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+
+        .plan p {
+            margin: 8px 0;
+        }
+
+        .plan button {
+            margin-top: 15px;
+            padding: 10px 18px;
+            border: none;
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .featured {
+            transform: scale(1.05);
+            border: 2px solid #0d6efd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Choose Your Plan</h1>
+
+    <div class="plans">
+        <div class="plan">
+            <h2>Basic</h2>
+            <div class="price">₹499</div>
+            <p>1 Website</p>
+            <p>Email Support</p>
+            <p>Basic Features</p>
+            <button>Select</button>
+        </div>
+
+        <div class="plan featured">
+            <h2>Pro</h2>
+            <div class="price">₹999</div>
+            <p>5 Websites</p>
+            <p>Priority Support</p>
+            <p>Advanced Tools</p>
+            <button>Select</button>
+        </div>
+
+        <div class="plan">
+            <h2>Premium</h2>
+            <div class="price">₹1499</div>
+            <p>Unlimited Websites</p>
+            <p>24/7 Support</p>
+            <p>All Features</p>
+            <button>Select</button>
+        </div>
+    </div>
+
+</body>
+</html>

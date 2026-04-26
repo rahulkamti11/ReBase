@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1> Calculator Program (Open Console to see the result): </h1>
+    <script>
+        let num1 = Number(prompt("Enter a no.: "));
+        console.log(num1);
+        let num2 = Number(prompt("Enter another no.: "));
+        console.log(num2);
+        let operator = prompt("Enter the operator (+ , - , * , / , %): ");
+        console.log(operator);
+
+        if((operator == '/' || operator == '%') && (num2 == 0)){
+            console.log("Error! Cannot Divide by 0")
+        }else{
+            console.log( eval(`num1 ${operator} num2`));
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #222;
+            color: white;
+            padding: 15px 20px;
+        }
+
+        .navbar {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: none;
+            font-size: 24px;
+        }
+
+        @media (max-width: 700px) {
+            .links {
+                display: none;
+            }
+
+            .menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <h2>Brand</h2>
+
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="menu">☰</div>
+        </div>
+    </nav>
+
+</body>
+</html>

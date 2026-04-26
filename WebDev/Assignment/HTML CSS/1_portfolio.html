@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        header p {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #00bcd4;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rahul</h1>
+        <p>Frontend Developer | Student</p>
+        <a href="#" class="btn">Hire Me</a>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I create responsive websites using HTML, CSS and JavaScript.</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="projects">
+            <div class="card">
+                <h3>Quiz App</h3>
+                <p>Basic scoring quiz system.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cart App</h3>
+                <p>Shopping cart using JavaScript.</p>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio</h3>
+                <p>Personal branding webpage.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Rahul
+    </footer>
+
+</body>
+</html>

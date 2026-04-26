@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard UI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #1f2937;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar p {
+            margin: 12px 0;
+        }
+
+        .main {
+            padding: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <div class="sidebar">
+            <h2>Admin Panel</h2>
+            <p>Dashboard</p>
+            <p>Users</p>
+            <p>Orders</p>
+            <p>Settings</p>
+        </div>
+
+        <div class="main">
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p>1,250</p>
+                </div>
+
+                <div class="card">
+                    <h3>Orders</h3>
+                    <p>320</p>
+                </div>
+
+                <div class="card">
+                    <h3>Revenue</h3>
+                    <p>₹85,000</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
